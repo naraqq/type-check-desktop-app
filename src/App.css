@@ -1,6 +1,7 @@
 .placeholder
 {
     position: relative;
+    z-index: 10;
 }
 
 .placeholder::after
@@ -10,6 +11,8 @@
     top: 0;
     content: attr(data-placeholder);
     pointer-events: none;
+    color: gray;
+    z-index: 1;
 }
 
 
@@ -27,3 +30,7 @@ input {
   input:active {
     outline: none;
   }
+
+input::placeholder {
+  display: none;
+}
